@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevQuiz Pro - Master Web Development</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="brand-icon">🧠</span>
+                <span class="brand-text">DevQuiz Pro</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link active" data-section="home">Home</a>
+                <a href="#topics" class="nav-link" data-section="topics">Topics</a>
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#stats" class="nav-link" data-section="stats">Stats</a>
+            </div>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Landing Screen -->
+        <div id="landing" class="screen active">
+            <section class="hero-section">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span>🚀 Interview Ready</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Master <span class="gradient-text">Web Development</span>
+                        <br>with Expert-Level Quizzes
+                    </h1>
+                    <p class="hero-subtitle">
+                        Comprehensive quiz platform with 600+ carefully crafted questions covering HTML, CSS, JavaScript, React, Next.js, and NPM. From basics to advanced interview questions.
+                    </p>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">600+</span>
+                            <span class="stat-label">Questions</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">6</span>
+                            <span class="stat-label">Technologies</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Difficulty Levels</span>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <button class="cta-button primary" onclick="scrollToTopics()">
+                            <span>Start Learning</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button class="cta-button secondary" onclick="showSection('about')">
+                            <span>Learn More</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="floating-cards">
+                        <div class="floating-card card-1">
+                            <span class="card-icon">🏗️</span>
+                            <span class="card-text">HTML</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <span class="card-icon">🎨</span>
+                            <span class="card-text">CSS</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <span class="card-icon">⚡</span>
+                            <span class="card-text">JS</span>
+                        </div>
+                        <div class="floating-card card-4">
+                            <span class="card-icon">⚛️</span>
+                            <span class="card-text">React</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="topics-section" id="topics">
+    <div class="section-header">
+        <h2 class="section-title">Choose Your Challenge</h2>
+        <p class="section-subtitle">Select a technology and difficulty level to begin your journey</p>
+    </div>
+    
+    <div class="topics-grid">
+        <div class="topic-card clickable-card" data-topic="html">
+            <div class="topic-header">
+                <div class="topic-icon">🏗️</div>
+                <div class="topic-info">
+                    <h3>HTML</h3>
+                    <p>Structure & Semantics</p>
+                </div>
+            </div>
+            <div class="topic-stats">
+                <span class="question-count">100 Questions</span>
+                <span class="difficulty-badge">Basic to Expert</span>
+            </div>
+            <div class="topic-features">
+                <span class="feature">✓ Semantic HTML</span>
+                <span class="feature">✓ Forms & Validation</span>
+                <span class="feature">✓ Accessibility</span>
+            </div>
+            <button class="start-learning-btn" data-topic="html">
+                <span>Start Learning</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="topic-card clickable-card" data-topic="css">
+            <div class="topic-header">
+                <div class="topic-icon">🎨</div>
+                <div class="topic-info">
+                    <h3>CSS</h3>
+                    <p>Styling & Layout</p>
+                </div>
+            </div>
+            <div class="topic-stats">
+                <span class="question-count">100 Questions</span>
+                <span class="difficulty-badge">Basic to Expert</span>
+            </div>
+            <div class="topic-features">
+                <span class="feature">✓ Flexbox & Grid</span>
+                <span class="feature">✓ Animations</span>
+                <span class="feature">✓ Responsive Design</span>
+            </div>
+            <button class="start-learning-btn" data-topic="css">
+                <span>Start Learning</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="topic-card clickable-card" data-topic="javascript">
+            <div class="topic-header">
+                <div class="topic-icon">⚡</div>
+                <div class="topic-info">
+                    <h3>JavaScript</h3>
+                    <p>Logic & Interactivity</p>
+                </div>
+            </div>
+            <div class="topic-stats">
+                <span class="question-count">100 Questions</span>
+                <span class="difficulty-badge">Basic to Expert</span>
+            </div>
+            <div class="topic-features">
+                <span class="feature">✓ ES6+ Features</span>
+                <span class="feature">✓ Async Programming</span>
+                <span class="feature">✓ DOM Manipulation</span>
+            </div>
+            <button class="start-learning-btn" data-topic="javascript">
+                <span>Start Learning</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="topic-card clickable-card" data-topic="react">
+            <div class="topic-header">
+                <div class="topic-icon">⚛️</div>
+                <div class="topic-info">
+                    <h3>React</h3>
+                    <p>Component Library</p>
+                </div>
+            </div>
+            <div class="topic-stats">
+                <span class="question-count">100 Questions</span>
+                <span class="difficulty-badge">Basic to Expert</span>
+            </div>
+            <div class="topic-features">
+                <span class="feature">✓ Hooks & State</span>
+                <span class="feature">✓ Component Lifecycle</span>
+                <span class="feature">✓ Performance</span>
+            </div>
+            <button class="start-learning-btn" data-topic="react">
+                <span>Start Learning</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="topic-card clickable-card" data-topic="nextjs">
+            <div class="topic-header">
+                <div class="topic-icon">▲</div>
+                <div class="topic-info">
+                    <h3>Next.js</h3>
+                    <p>React Framework</p>
+                </div>
+            </div>
+            <div class="topic-stats">
+                <span class="question-count">100 Questions</span>
+                <span class="difficulty-badge">Basic to Expert</span>
+            </div>
+            <div class="topic-features">
+                <span class="feature">✓ SSR & SSG</span>
+                <span class="feature">✓ API Routes</span>
+                <span class="feature">✓ Optimization</span>
+            </div>
+            <button class="start-learning-btn" data-topic="nextjs">
+                <span>Start Learning</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="topic-card clickable-card" data-topic="npm">
+            <div class="topic-header">
+                <div class="topic-icon">📦</div>
+                <div class="topic-info">
+                    <h3>NPM</h3>
+                    <p>Package Management</p>
+                </div>
+            </div>
+            <div class="topic-stats">
+                <span class="question-count">100 Questions</span>
+                <span class="difficulty-badge">Basic to Expert</span>
+            </div>
+            <div class="topic-features">
+                <span class="feature">✓ Package Management</span>
+                <span class="feature">✓ Scripts & Config</span>
+                <span class="feature">✓ Publishing</span>
+            </div>
+            <button class="start-learning-btn" data-topic="npm">
+                <span>Start Learning</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+        </div>
+
+        <!-- About Screen -->
+        <div id="about" class="screen">
+            <div class="about-container">
+                <div class="about-hero">
+                    <h1 class="about-title">About DevQuiz Pro</h1>
+                    <p class="about-subtitle">Empowering developers with comprehensive knowledge assessment</p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-section">
+                        <div class="about-text">
+                            <h2>Our Mission</h2>
+                            <p>DevQuiz Pro is designed to help web developers at all levels master their skills through comprehensive, interview-focused quizzes. Whether you're preparing for your first job or advancing your career, our platform provides the practice you need to succeed.</p>
+                            
+                            <h3>Why Choose DevQuiz Pro?</h3>
+                            <ul class="feature-list">
+                                <li>
+                                    <div class="feature-icon">🎯</div>
+                                    <div class="feature-content">
+                                        <h4>Interview-Focused</h4>
+                                        <p>Questions designed based on real interview experiences and industry standards</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-icon">📚</div>
+                                    <div class="feature-content">
+                                        <h4>Comprehensive Coverage</h4>
+                                        <p>From basic concepts to advanced topics across all major web technologies</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-icon">🚀</div>
+                                    <div class="feature-content">
+                                        <h4>Progressive Learning</h4>
+                                        <p>Structured difficulty levels that grow with your expertise</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feature-icon">💡</div>
+                                    <div class="feature-content">
+                                        <h4>Instant Feedback</h4>
+                                        <p>Learn from mistakes with detailed explanations and hints</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="about-visual">
+                            <div class="stats-showcase">
+                                <div class="showcase-stat">
+                                    <span class="showcase-number">600+</span>
+                                    <span class="showcase-label">Expert Questions</span>
+                                </div>
+                                <div class="showcase-stat">
+                                    <span class="showcase-number">6</span>
+                                    <span class="showcase-label">Technologies</span>
+                                </div>
+                                <div class="showcase-stat">
+                                    <span class="showcase-number">3</span>
+                                    <span class="showcase-label">Difficulty Levels</span>
+                                </div>
+                                <div class="showcase-stat">
+                                    <span class="showcase-number">100%</span>
+                                    <span class="showcase-label">Free to Use</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="technologies-section">
+                        <h2>Technologies Covered</h2>
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <div class="tech-icon">🏗️</div>
+                                <h3>HTML</h3>
+                                <p>Semantic markup, accessibility, forms, and modern HTML5 features</p>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">🎨</div>
+                                <h3>CSS</h3>
+                                <p>Styling, layouts, animations, responsive design, and CSS Grid/Flexbox</p>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">⚡</div>
+                                <h3>JavaScript</h3>
+                                <p>ES6+, async programming, DOM manipulation, and modern JS concepts</p>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">⚛️</div>
+                                <h3>React</h3>
+                                <p>Components, hooks, state management, and React ecosystem</p>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">▲</div>
+                                <h3>Next.js</h3>
+                                <p>SSR, SSG, API routes, and full-stack React development</p>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">📦</div>
+                                <h3>NPM</h3>
+                                <p>Package management, scripts, dependencies, and publishing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Screen -->
+        <div id="stats" class="screen">
+            <div class="stats-container">
+                <div class="stats-hero">
+                    <h1 class="stats-title">Your Learning Journey</h1>
+                    <p class="stats-subtitle">Track your progress and achievements</p>
+                </div>
+                
+                <div class="stats-content">
+                    <div class="stats-overview">
+                        <div class="overview-card">
+                            <div class="overview-icon">🎯</div>
+                            <div class="overview-info">
+                                <span class="overview-number" id="totalQuizzes">0</span>
+                                <span class="overview-label">Quizzes Completed</span>
+                            </div>
+                        </div>
+                        <div class="overview-card">
+                            <div class="overview-icon">⭐</div>
+                            <div class="overview-info">
+                                <span class="overview-number" id="averageScore">0%</span>
+                                <span class="overview-label">Average Score</span>
+                            </div>
+                        </div>
+                        <div class="overview-card">
+                            <div class="overview-icon">🏆</div>
+                            <div class="overview-info">
+                                <span class="overview-number" id="bestScore">0%</span>
+                                <span class="overview-label">Best Score</span>
+                            </div>
+                        </div>
+                        <div class="overview-card">
+                            <div class="overview-icon">⏱️</div>
+                            <div class="overview-info">
+                                <span class="overview-number" id="totalTime">0m</span>
+                                <span class="overview-label">Time Spent</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-charts">
+                        <div class="chart-section">
+                            <h2>Performance by Technology</h2>
+                            <div class="performance-chart" id="performanceChart">
+                                <div class="chart-item">
+                                    <div class="chart-label">
+                                        <span class="chart-icon">🏗️</span>
+                                        <span>HTML</span>
+                                    </div>
+                                    <div class="chart-bar">
+                                        <div class="chart-fill" style="width: 0%" data-tech="html"></div>
+                                    </div>
+                                    <span class="chart-score">0%</span>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-label">
+                                        <span class="chart-icon">🎨</span>
+                                        <span>CSS</span>
+                                    </div>
+                                    <div class="chart-bar">
+                                        <div class="chart-fill" style="width: 0%" data-tech="css"></div>
+                                    </div>
+                                    <span class="chart-score">0%</span>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-label">
+                                        <span class="chart-icon">⚡</span>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div class="chart-bar">
+                                        <div class="chart-fill" style="width: 0%" data-tech="javascript"></div>
+                                    </div>
+                                    <span class="chart-score">0%</span>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-label">
+                                        <span class="chart-icon">⚛️</span>
+                                        <span>React</span>
+                                    </div>
+                                    <div class="chart-bar">
+                                        <div class="chart-fill" style="width: 0%" data-tech="react"></div>
+                                    </div>
+                                    <span class="chart-score">0%</span>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-label">
+                                        <span class="chart-icon">▲</span>
+                                        <span>Next.js</span>
+                                    </div>
+                                    <div class="chart-bar">
+                                        <div class="chart-fill" style="width: 0%" data-tech="nextjs"></div>
+                                    </div>
+                                    <span class="chart-score">0%</span>
+                                </div>
+                                <div class="chart-item">
+                                    <div class="chart-label">
+                                        <span class="chart-icon">📦</span>
+                                        <span>NPM</span>
+                                    </div>
+                                    <div class="chart-bar">
+                                        <div class="chart-fill" style="width: 0%" data-tech="npm"></div>
+                                    </div>
+                                    <span class="chart-score">0%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="chart-section">
+                            <h2>Recent Activity</h2>
+                            <div class="activity-list" id="recentActivity">
+                                <div class="activity-item empty">
+                                    <div class="activity-icon">📝</div>
+                                    <div class="activity-content">
+                                        <p>No quizzes completed yet</p>
+                                        <span class="activity-time">Start your first quiz to see activity here</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="achievements-section">
+                        <h2>Achievements</h2>
+                        <div class="achievements-grid" id="achievementsGrid">
+                            <div class="achievement-item locked">
+                                <div class="achievement-icon">🎯</div>
+                                <div class="achievement-info">
+                                    <h3>First Steps</h3>
+                                    <p>Complete your first quiz</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item locked">
+                                <div class="achievement-icon">🔥</div>
+                                <div class="achievement-info">
+                                    <h3>Perfect Score</h3>
+                                    <p>Get 100% on any quiz</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item locked">
+                                <div class="achievement-icon">📚</div>
+                                <div class="achievement-info">
+                                    <h3>Knowledge Seeker</h3>
+                                    <p>Complete 10 quizzes</p>
+                                </div>
+                            </div>
+                            <div class="achievement-item locked">
+                                <div class="achievement-icon">🏆</div>
+                                <div class="achievement-info">
+                                    <h3>Expert Level</h3>
+                                    <p>Average 90%+ across all topics</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Configuration Screen -->
+        <div id="config" class="screen">
+            <div class="config-container">
+                <div class="config-header">
+                    <button class="back-btn" id="backToHome">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Back
+                    </button>
+                    <div class="config-topic">
+                        <div class="config-topic-icon" id="configTopicIcon">🏗️</div>
+                        <div class="config-topic-info">
+                            <h2 id="configTopicName">HTML</h2>
+                            <p>Configure your quiz settings</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="config-options">
+                    <div class="config-section">
+                        <h3>Difficulty Level</h3>
+                        <div class="difficulty-options">
+                            <div class="difficulty-option" data-difficulty="basic">
+                                <div class="difficulty-icon">🌱</div>
+                                <div class="difficulty-info">
+                                    <h4>Basic</h4>
+                                    <p>Fundamental concepts and syntax</p>
+                                </div>
+                            </div>
+                            <div class="difficulty-option" data-difficulty="intermediate">
+                                <div class="difficulty-icon">🚀</div>
+                                <div class="difficulty-info">
+                                    <h4>Intermediate</h4>
+                                    <p>Practical applications and best practices</p>
+                                </div>
+                            </div>
+                            <div class="difficulty-option" data-difficulty="advanced">
+                                <div class="difficulty-icon">🎯</div>
+                                <div class="difficulty-info">
+                                    <h4>Advanced</h4>
+                                    <p>Expert-level and interview questions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="config-section">
+                        <h3>Number of Questions</h3>
+                        <div class="question-count-options">
+                            <div class="count-option" data-count="10">
+                                <span class="count-number">10</span>
+                                <span class="count-label">Quick Test</span>
+                            </div>
+                            <div class="count-option" data-count="25">
+                                <span class="count-number">25</span>
+                                <span class="count-label">Standard</span>
+                            </div>
+                            <div class="count-option" data-count="50">
+                                <span class="count-number">50</span>
+                                <span class="count-label">Comprehensive</span>
+                            </div>
+                            <div class="count-option" data-count="100">
+                                <span class="count-number">100</span>
+                                <span class="count-label">Full Test</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="config-section">
+                        <h3>Quiz Mode</h3>
+                        <div class="mode-options">
+                            <div class="mode-option" data-mode="practice">
+                                <div class="mode-icon">📚</div>
+                                <div class="mode-info">
+                                    <h4>Practice Mode</h4>
+                                    <p>See answers immediately after each question</p>
+                                </div>
+                            </div>
+                            <div class="mode-option" data-mode="exam">
+                                <div class="mode-icon">⏱️</div>
+                                <div class="mode-info">
+                                    <h4>Exam Mode</h4>
+                                    <p>Complete all questions before seeing results</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button id="startConfiguredQuiz" class="start-quiz-btn" disabled>
+                    <span>Start Quiz</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz" class="screen">
+            <div class="quiz-header">
+                <div class="quiz-nav">
+                    <button class="quiz-back-btn" id="quitQuiz">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 12H5M5 12L12 19M5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Quit
+                    </button>
+                    <div class="quiz-info">
+                        <div class="topic-badge" id="currentTopic"></div>
+                        <div class="difficulty-badge" id="currentDifficulty"></div>
+                    </div>
+                </div>
+                
+                <div class="progress-section">
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                        </div>
+                        <span class="progress-text">
+                            Question <span id="currentQ">1</span> of <span id="totalQ">10</span>
+                        </span>
+                    </div>
+                    <div class="quiz-timer" id="quizTimer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <span id="timeDisplay">00:00</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quiz-content">
+                <div class="question-container">
+                    <div class="question-meta">
+                        <span class="question-difficulty" id="questionDifficulty">Basic</span>
+                        <span class="question-type" id="questionType">Concept</span>
+                    </div>
+                    <h2 id="questionText" class="question"></h2>
+                    <div class="question-hint" id="questionHint" style="display: none;">
+                        <div class="hint-icon">💡</div>
+                        <span class="hint-text"></span>
+                    </div>
+                </div>
+                
+                <div class="options-container" id="optionsContainer">
+                    <!-- Options will be dynamically inserted -->
+                </div>
+                
+                <div class="quiz-actions">
+                    <button id="hintBtn" class="hint-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                            <path d="M9.09 9A3 3 0 0 1 12 6C13.66 6 15 7.34 15 9C15 10.66 13.66 12 12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 17H12.01" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Hint
+                    </button>
+                    
+                    <button id="nextBtn" class="next-btn" disabled>
+                        <span>Next Question</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results" class="screen">
+            <div class="results-container">
+                <div class="results-header">
+                    <div class="results-badge" id="resultsBadge">Quiz Complete!</div>
+                    <h2 id="resultTitle">Excellent Work!</h2>
+                    <p id="resultMessage">You've successfully completed the quiz</p>
+                </div>
+                
+                <div class="results-content">
+                    <div class="score-section">
+                        <div class="score-circle">
+                            <svg class="score-ring" width="200" height="200">
+                                <circle cx="100" cy="100" r="90" stroke="#e5e7eb" stroke-width="8" fill="none"/>
+                                <circle id="scoreCircle" cx="100" cy="100" r="90" stroke="url(#gradient)" stroke-width="8" fill="none" stroke-linecap="round" transform="rotate(-90 100 100)"/>
+                                <defs>
+                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                        <stop offset="0%" style="stop-color:#667eea"/>
+                                        <stop offset="100%" style="stop-color:#764ba2"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="score-text">
+                                <span id="scorePercentage">0%</span>
+                                <span class="score-label">Score</span>
+                            </div>
+                        </div>
+                        
+                        <div class="performance-level">
+                            <div class="level-icon" id="levelIcon">🎉</div>
+                            <div class="level-text">
+                                <span class="level-title" id="levelTitle">Expert Level</span>
+                                <span class="level-description" id="levelDescription">Outstanding performance!</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-section">
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon correct">✓</div>
+                                <div class="stat-info">
+                                    <span class="stat-number" id="correctAnswers">0</span>
+                                    <span class="stat-label">Correct</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon wrong">✗</div>
+                                <div class="stat-info">
+                                    <span class="stat-number" id="wrongAnswers">0</span>
+                                    <span class="stat-label">Wrong</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon time">⏱️</div>
+                                <div class="stat-info">
+                                    <span class="stat-number" id="timeTaken">0s</span>
+                                    <span class="stat-label">Time</span>
+                                </div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-icon accuracy">🎯</div>
+                                <div class="stat-info">
+                                    <span class="stat-number" id="accuracy">0%</span>
+                                    <span class="stat-label">Accuracy</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="difficulty-breakdown" id="difficultyBreakdown">
+                            <h3>Performance by Difficulty</h3>
+                            <div class="breakdown-items">
+                                <!-- Will be populated dynamically -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="results-actions">
+                    <button id="reviewBtn" class="review-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M1 12S5 4 12 4S23 12 23 12S19 20 12 20S1 12 1 12Z" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        Review Answers
+                    </button>
+                    <button id="retryBtn" class="retry-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M1 4V10H7M23 20V14H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10M3.51 15A9 9 0 0 0 18.36 18.36L23 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Try Again
+                    </button>
+                    <button id="homeBtn" class="home-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 9L12 2L21 9V20A2 2 0 0 1 19 18H5A2 2 0 0 1 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <polyline points="9,22 9,12 15,12 15,22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Home
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <span class="brand-icon">🧠</span>
+                    <span class="brand-text">DevQuiz Pro</span>
+                </div>
+                <p>Master web development with comprehensive quizzes designed for interview success.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">GitHub</a>
+                    <a href="#" class="social-link">Twitter</a>
+                    <a href="#" class="social-link">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Technologies</h4>
+                <ul>
+                    <li><a href="#html">HTML</a></li>
+                    <li><a href="#css">CSS</a></li>
+                    <li><a href="#javascript">JavaScript</a></li>
+                    <li><a href="#react">React</a></li>
+                    <li><a href="#nextjs">Next.js</a></li>
+                    <li><a href="#npm">NPM</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#practice">Practice Tests</a></li>
+                    <li><a href="#interview">Interview Prep</a></li>
+                    <li><a href="#advanced">Advanced Topics</a></li>
+                    <li><a href="#tips">Study Tips</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#help">Help Center</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#bug-report">Report Bug</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DevQuiz Pro. Built for developers, by developers.</p>
+        </div>
+    </footer>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
